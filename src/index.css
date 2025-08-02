@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-primary: #030014;
@@ -17,18 +17,18 @@
 
   --breakpoint-xs: 480px;
 
-  --background-image-hero-pattern: url("/hero-bg.jpg");
+  --background-image-hero-pattern: url('/hero-bg.jpg');
 }
 
 @layer base {
   body {
-    font-family: "DM Sans", serif;
+    font-family: 'DM Sans', serif;
     font-optical-sizing: auto;
     background: #030014;
   }
 
   h1 {
-    @apply mx-auto max-w-4xl text-center text-5xl font-bold leading-tight tracking-[-1%] text-white sm:text-[64px] sm:leading-[76px];
+    @apply mx-auto max-w-4xl text-center text-5xl font-bold leading-tight tracking-[-1%] text-white sm:text-[64px] sm:leading-[1.5];
   }
 
   h2 {
@@ -149,7 +149,7 @@
 @utility fancy-text {
   -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
   font-size: 190px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 @utility hide-scrollbar {

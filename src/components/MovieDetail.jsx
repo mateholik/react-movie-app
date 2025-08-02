@@ -101,8 +101,7 @@ const MovieDetail = () => {
   };
 
   return (
-    <div className='min-h-screen'>
-      <div className='pattern' />
+    <div className='min-h-screen text-white'>
       <div className='wrapper'>
         <nav className='mb-8'>
           <Link to='/' className='text-blue-500 hover:underline'>
@@ -111,7 +110,7 @@ const MovieDetail = () => {
         </nav>
 
         <div className='movie-detail'>
-          <div className='movie-detail-header'>
+          <div className='movie-detail-header grid md:grid-cols-2 gap-4'>
             <img
               src={
                 movie.poster_path
@@ -122,13 +121,13 @@ const MovieDetail = () => {
               className='movie-detail-poster'
             />
 
-            <div className='movie-detail-info'>
-              <h1 className='text-4xl font-bold mb-4'>{movie.title}</h1>
+            <div className='movie-detail-info '>
+              <h1 className='text-4xl font-bold mb-4 text-left leading-normal'>
+                {movie.title}
+              </h1>
 
               {movie.tagline && (
-                <p className='text-lg italic text-gray-600 mb-4'>
-                  {movie.tagline}
-                </p>
+                <p className='text-lg italic  mb-4'>{movie.tagline}</p>
               )}
 
               <div className='movie-meta mb-6'>
@@ -164,7 +163,7 @@ const MovieDetail = () => {
 
               <div className='movie-overview mb-6'>
                 <h2 className='text-2xl font-semibold mb-3'>Overview</h2>
-                <p className='text-gray-700 leading-relaxed'>
+                <p className='leading-relaxed'>
                   {movie.overview || 'No overview available.'}
                 </p>
               </div>
@@ -193,7 +192,7 @@ const MovieDetail = () => {
           {movie.credits?.cast && movie.credits.cast.length > 0 && (
             <div className='cast-section mt-12'>
               <h2 className='text-2xl font-semibold mb-6'>Cast</h2>
-              <div className='cast-grid'>
+              <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
                 {movie.credits.cast.slice(0, 12).map((actor) => (
                   <div key={actor.id} className='cast-member'>
                     <img
@@ -207,7 +206,7 @@ const MovieDetail = () => {
                     />
                     <div className='cast-info'>
                       <p className='font-semibold'>{actor.name}</p>
-                      <p className='text-sm text-gray-600'>{actor.character}</p>
+                      <p className='text-sm '>{actor.character}</p>
                     </div>
                   </div>
                 ))}
